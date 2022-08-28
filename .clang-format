@@ -1,0 +1,24 @@
+BasedOnStyle: Google
+ColumnLimit: 100
+AccessModifierOffset: -4
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+BreakBeforeBraces: Attach
+BreakConstructorInitializers : AfterColon
+# ConstructorInitializerIndentWidth: 8
+IndentWidth: 4
+NamespaceIndentation: None
+IndentPPDirectives: BeforeHash
+Standard: c++17
+UseTab: Never
+
+SpacesBeforeTrailingComments : 4
+AlignTrailingComments : true
+# ContinuationIndentWidth: 4
+ReflowComments : true
+FixNamespaceComments : true
+

@@ -1,0 +1,10 @@
+*.jpeg
+*.jpg
+*.png
+*.bmp
+*.exe
+*.heic
+*.svg
+/doc
+!/src/pggui/resources/icon.iconset/*
+!/src/pggui/resources/*

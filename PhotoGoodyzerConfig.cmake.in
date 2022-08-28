@@ -1,0 +1,4 @@
+include(CMakeFindDependencyMacro)
+set(PhotoGoodyzer_VERSION @CMAKE_PROJECT_VERSION@)
+find_dependency(OpenCV REQUIRED core imgproc)
+include("${CMAKE_CURRENT_LIST_DIR}/PhotoGoodyzerTargets.cmake")
