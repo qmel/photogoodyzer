@@ -27,7 +27,7 @@ private slots:
     void OnSaveBtnClicked();
     void on_info_btn_clicked();
     void OnImageChanged(const QString& filename);
-    void ControlButtons(bool is_processing);
+    void SetButtons(bool is_processing);
     void SetProgressValue(int new_value);
 
 private:

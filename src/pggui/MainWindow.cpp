@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 
     setWindowTitle(default_title);
     setWindowIcon(QIcon(":/icon512.ico"));
+    setAcceptDrops(true);
 
     connect(ui->load_btn, &QPushButton::clicked, this, &MainWindow::OnLoadBtnClicked);
     connect(ui->save_btn, &QPushButton::clicked, this, &MainWindow::OnSaveBtnClicked);
@@ -55,7 +56,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
             &ImageDrawWidget::SetColorCorrRatio);
     connect(ui->hist_eq_slider, &QSlider::valueChanged, image_draw,
             &ImageDrawWidget::SetHistEqRatio);
-    connect(image_draw, &ImageDrawWidget::IsProcessing, this, &MainWindow::ControlButtons);
+    connect(image_draw, &ImageDrawWidget::IsProcessing, this, &MainWindow::SetButtons);
     connect(image_draw, &ImageDrawWidget::ProgressValue, this, &MainWindow::SetProgressValue);
 }
 
@@ -121,7 +122,8 @@ void MainWindow::OnImageChanged(const QString &filename) {
     setWindowTitle(QString("%0: \"%1\"").arg(default_title).arg(filename));
 }
 
-void MainWindow::ControlButtons(bool is_processing) {
+void MainWindow::SetButtons(bool is_processing) {
+    this->setAcceptDrops(!is_processing);
     ui->color_cor_slider->setDisabled(is_processing);
     ui->hist_eq_slider->setDisabled(is_processing);
     ui->load_btn->setDisabled(is_processing);
