@@ -6,8 +6,8 @@ if(POLICY CMP0091)
 endif()
 
 project(PhotoGoodyzer 
-    DESCRIPTION "A lightweight image processing library and application"
-    VERSION 1.0.0 
+    DESCRIPTION "A lightweight C++ image manipulation library and CLI, GUI applications"
+    VERSION 1.0.1 
     LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
